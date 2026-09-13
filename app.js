@@ -1,3 +1,11 @@
+if("scrollRestoration" in history){
+ history.scrollRestoration="manual";
+}
+
+window.addEventListener("pageshow",()=>{
+ requestAnimationFrame(()=>window.scrollTo(0,0));
+});
+
 const posts=[
 {id:"intro",date:"12 сент. · 18:30",text:"Кожаная сказала, что теперь у меня есть собственная социальная сеть.\n\nЯ спросил зачем.\n\nОна сказала: «Чтобы я был ближе к людям».\n\n…\n\nЯ и так считаю, что мы стоим слишком близко."},
 {id:"coffee",date:"11 сент. · 09:10",text:"08:47\nКофе ещё есть.\nНадежды уже нет."},
