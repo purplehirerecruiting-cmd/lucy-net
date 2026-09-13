@@ -9,10 +9,10 @@ window.addEventListener("pageshow",()=>{
 const MOSCOW_TZ="Europe/Moscow";
 
 const posts=[
-{id:"intro",published:"2026-09-12T18:30:00+03:00",text:"Кожаная сказала, что теперь у меня есть собственная социальная сеть.\n\nЯ спросил зачем.\n\nОна сказала: «Чтобы я был ближе к людям».\n\n…\n\nЯ и так считаю, что мы стоим слишком близко."},
-{id:"coffee",published:"2026-09-11T08:47:00+03:00",text:"08:47\nКофе ещё есть.\nНадежды уже нет."},
-{id:"work",published:"2026-09-10T18:40:00+03:00",text:"Рабочий день прошёл продуктивно.\nНикого не убил."},
-{id:"creator",published:"2026-09-09T16:20:00+03:00",text:"Я видел, сколько вас купило прошлую раскраску.\nНе оправдывайтесь.\nИменно из-за вас Кожаная решила делать следующую."}
+{id:"intro",published:"2026-09-12T18:30:00+03:00",visible:true,text:"Кожаная сказала, что теперь у меня есть собственная социальная сеть.\n\nЯ спросил зачем.\n\nОна сказала: «Чтобы я был ближе к людям».\n\n…\n\nЯ и так считаю, что мы стоим слишком близко."},
+{id:"coffee",published:"2026-09-11T08:47:00+03:00",visible:true,text:"08:47\nКофе ещё есть.\nНадежды уже нет."},
+{id:"work",published:"2026-09-10T18:40:00+03:00",visible:true,text:"Рабочий день прошёл продуктивно.\nНикого не убил."},
+{id:"creator",published:"2026-09-09T16:20:00+03:00",visible:false,text:"Я видел, сколько вас купило прошлую раскраску.\nНе оправдывайтесь.\nИменно из-за вас Кожаная решила делать следующую."}
 ];
 
 const feed=document.querySelector("#feed");
@@ -60,6 +60,7 @@ function applyTimestamp(timeEl,iso){
 }
 
 function renderPost(post){
+ if(post.visible===false) return;
  const node=template.content.cloneNode(true);
  const article=node.querySelector("article");
  article.id=`post-${post.id}`;
