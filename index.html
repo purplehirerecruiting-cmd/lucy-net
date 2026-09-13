@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#17131a" />
+  <meta name="description" content="ЛЮСИ.НЕТ — личная социальная сеть одного очень уставшего сфинкса." />
+  <title>ЛЮСИ.НЕТ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="ЛЮСИ.НЕТ">ЛЮСИ.НЕТ</a>
+      <nav class="topnav" aria-label="Навигация">
+        <a href="#feed">Лента</a>
+        <a href="#stickers">Стикеры</a>
+        <a href="#worlds">Sphynx Vale</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="profile-card" aria-labelledby="profile-name">
+        <div class="profile-avatar" aria-hidden="true">Л</div>
+        <div class="profile-copy">
+          <div class="eyebrow">социальная сеть одного кота</div>
+          <h1 id="profile-name">ЛЮСЯ <span class="verified" aria-label="проверенный профиль">✓</span></h1>
+          <p class="handle">@lucy.sphynxvale</p>
+          <p class="bio">Кот. Кофе. Мистика.<br>Наблюдаю за деятельностью Кожаной.<br>Результаты наблюдений неутешительные.</p>
+          <p class="profile-note">У Люси есть социальная сеть. У остальных есть право её читать.</p>
+        </div>
+      </section>
+
+      <section id="feed" class="feed" aria-label="Лента Люси"></section>
+
+      <section id="stickers" class="utility-card">
+        <div>
+          <p class="eyebrow">закреплено</p>
+          <h2>Меня сделали стикерами.</h2>
+          <p>Пользуйтесь. Раз уж это всё равно произошло.</p>
+        </div>
+        <div class="button-row" aria-label="Площадки со стикерами">
+          <button type="button" disabled>Telegram — скоро</button>
+          <button type="button" disabled>MAX — скоро</button>
+          <button type="button" disabled>VK — скоро</button>
+        </div>
+      </section>
+
+      <section id="worlds" class="utility-card worlds-card">
+        <div>
+          <p class="eyebrow">Sphynx Vale</p>
+          <h2>Другие последствия деятельности Кожаной</h2>
+          <p>Раскраски, миры, игры и остальные проекты будут появляться здесь без превращения ЛЮСИ.НЕТ в магазин.</p>
+        </div>
+        <a class="ghost-link" href="#feed">Вернуться к осуждению ↑</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>SPHYNX VALE × LK STUDIO</span>
+      <span>Люся отрицает причастность.</span>
+    </footer>
+  </div>
+
+  <template id="post-template">
+    <article class="post-card">
+      <header class="post-header">
+        <div class="post-avatar" aria-hidden="true">Л</div>
+        <div>
+          <div class="post-name">ЛЮСЯ <span class="verified">✓</span></div>
+          <div class="post-meta"><span class="post-handle">@lucy.sphynxvale</span> · <time></time></div>
+        </div>
+      </header>
+      <div class="post-visual" hidden></div>
+      <div class="post-text"></div>
+      <a class="post-cta" hidden></a>
+      <div class="reactions" aria-label="Реакции Люси"></div>
+      <div class="post-actions">
+        <button class="share-button" type="button">Поделиться</button>
+        <span class="opinion-note">Ваше мнение очень важно для Люси. <strong>Нет.</strong></span>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
