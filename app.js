@@ -4,12 +4,11 @@ window.addEventListener("pageshow",()=>requestAnimationFrame(()=>window.scrollTo
 const MOSCOW_TZ="Europe/Moscow";
 const posts=[
  {id:"intro",published:"2026-09-14T17:40:00+03:00",visible:true,text:"Кожаная сказала, что теперь у меня есть собственная социальная сеть.\n\nЯ спросил зачем.\n\nОна сказала: «Чтобы ты был ближе к людям».\n\n…\n\nЯ и так считаю, что мы стоим слишком близко."},
- {id:"coffee",published:"2026-09-14T08:47:00+03:00",visible:true,text:"08:47\nКофе ещё есть.\nНадежды уже нет."},
- {id:"work",published:"2026-09-13T18:40:00+03:00",visible:true,text:"Рабочий день прошёл продуктивно.\nЯ пережил все созвоны.\n\nСчитаю это достижением."},
- {id:"door",published:"2026-09-12T23:11:00+03:00",visible:true,text:"В Sphynx Vale снова появилась дверь, которой вчера не было.\n\nКожаная предлагает проверить, куда она ведёт.\n\nКожаная вообще очень смелая, когда идти должен я."},
- {id:"name",published:"2026-09-12T14:05:00+03:00",visible:true,text:"— Люся!\n\nМеня зовут Люсьен.\n\nТапки ничему её не научили."},
- {id:"plans",published:"2026-09-11T20:16:00+03:00",visible:true,text:"Планы на вечер:\n1. Не участвовать.\n2. Осуждать происходящее.\n3. Кофе.\n\nВпервые Кожаная составила план, который я готов поддержать."},
- {id:"creator",published:"2026-09-09T16:20:00+03:00",visible:false,text:"Я видел, сколько вас купило прошлую раскраску.\nНе оправдывайтесь.\nИменно из-за вас Кожаная решила делать следующую."}
+ {id:"coffee",published:"2026-09-10T08:47:00+03:00",visible:true,text:"08:47\nКофе ещё есть.\nНадежды уже нет."},
+ {id:"work",published:"2026-09-07T18:40:00+03:00",visible:true,text:"Рабочий день прошёл продуктивно.\nЯ пережил все созвоны.\n\nСчитаю это достижением."},
+ {id:"door",published:"2026-09-03T23:11:00+03:00",visible:true,text:"В Sphynx Vale снова появилась дверь, которой вчера не было.\n\nКожаная предлагает проверить, куда она ведёт.\n\nКожаная вообще очень смелая, когда идти должен я."},
+ {id:"plans",published:"2026-08-30T20:16:00+03:00",visible:true,text:"Планы на вечер:\n1. Не участвовать.\n2. Осуждать происходящее.\n3. Кофе.\n\nВпервые Кожаная составила план, который я готов поддержать."},
+ {id:"creator",published:"2026-08-26T16:20:00+03:00",visible:false,text:"Я видел, сколько вас купило прошлую раскраску.\nНе оправдывайтесь.\nИменно из-за вас Кожаная решила делать следующую."}
 ];
 
 const feed=document.querySelector("#feed");
@@ -29,7 +28,7 @@ const pinned=document.querySelector("#stickers");
 if(pinned){
  const oldLabel=pinned.querySelector(":scope > .eyebrow");
  if(oldLabel){oldLabel.remove();}
- const label=document.createElement("div");label.className="pinned-label";label.innerHTML="<span>закреплено</span><span>10 стикеров</span>";pinned.prepend(label);
+ const label=document.createElement("div");label.className="pinned-label";label.innerHTML="<span>закреплено · № 1</span><span>10 стикеров</span>";pinned.prepend(label);
  const text=pinned.querySelector(".post-text");
  if(text){
   const heading=document.createElement("div");heading.className="sticker-heading";heading.textContent="Стикеры ЛЮСИ.НЕТ";text.before(heading);
