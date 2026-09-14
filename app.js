@@ -33,8 +33,14 @@ if(pinned){
  const text=pinned.querySelector(".post-text");
  if(text){
   const heading=document.createElement("div");heading.className="sticker-heading";heading.textContent="Стикеры ЛЮСИ.НЕТ";text.before(heading);
-  const preview=document.createElement("div");preview.className="sticker-preview";
-  const image=document.createElement("img");image.src="./public/assets/stickers_showcase.webp";image.alt="Стикеры Люсьена: кофе, работа и отношение к людям";image.loading="eager";preview.appendChild(image);
+  const preview=document.createElement("div");preview.className="sticker-preview sticker-grid";
+  const stickers=[
+   ["./public/assets/09_COFFEE_IV.png","Люсьен за ноутбуком с кофейной капельницей"],
+   ["./public/assets/02_ZAEBALSYA.png","Люсьен устал за рабочим столом"],
+   ["./public/assets/08_TVOYA_PROBLEMA.png","Люсьен уходит со словами про чужую проблему"],
+   ["./public/assets/03_MNE_NUZHEN_KOFE.png","Люсьен с кружкой кофе"]
+  ];
+  stickers.forEach(([src,alt],index)=>{const image=document.createElement("img");image.src=src;image.alt=alt;image.loading=index===0?"eager":"lazy";preview.appendChild(image);});
   text.after(preview);
  }
 }
