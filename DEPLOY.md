@@ -1,18 +1,32 @@
-# LUCY.NET — Cloudflare Pages deployment
+# ЛЮСИ.НЕТ — deployment
 
-This repository is a static site. No build step is required.
+Текущий production-хостинг: **GitHub Pages**.
 
-## Cloudflare Pages settings
+## Production
 
 - Repository: `purplehirerecruiting-cmd/lucy-net`
 - Production branch: `main`
-- Framework preset: `None`
-- Build command: leave empty
-- Build output directory: `/`
-- Root directory: `/`
+- Source: `Deploy from a branch`
+- Folder: `/(root)`
+- Custom domain: `lusy.space`
+- Production URL: `https://lusy.space/`
+- DNS check: successful
+- Enforce HTTPS: enabled
 
-After the first deployment Cloudflare will assign a temporary `*.pages.dev` address. A custom domain can be attached later without changing the site code or QR strategy.
+Сайт статический. Build step не требуется.
 
-## Important
+## DNS
 
-The existing `lk-digital-yandex` Worker is a separate project and must not be changed or reused for LUCY.NET.
+Корневой домен `lusy.space` направлен на GitHub Pages A-records.
+
+`www.lusy.space` используется как CNAME на GitHub Pages host.
+
+DNS уже настроен и без необходимости не меняется.
+
+## Важно
+
+- Не переключать production на Cloudflare Pages без отдельного решения.
+- Не удалять custom domain в GitHub Pages.
+- Не нажимать Unpublish site без явной необходимости.
+- Не менять проект `lk-digital-yandex`: он отдельный и не относится к ЛЮСИ.НЕТ.
+- Постоянная QR-точка входа для будущих PDF: `https://lusy.space/`.
