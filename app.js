@@ -23,7 +23,7 @@ posts.forEach(renderPost);
 document.querySelectorAll("time[data-published]").forEach(timeEl=>applyTimestamp(timeEl,timeEl.dataset.published));
 
 const nav=document.querySelector(".topnav");
-if(nav){nav.innerHTML='<a href="#feed">Лента</a><a href="#stickers">Стикеры</a><a href="#worlds">Sphynx Vale</a><a href="#bonuses">Бонусы</a>';}
+if(nav){nav.innerHTML='<a href="#stickers">Стикеры</a><a href="#worlds">Sphynx Vale</a><a href="#bonuses">Бонусы</a>';}
 
 const pinned=document.querySelector("#stickers");
 if(pinned){
