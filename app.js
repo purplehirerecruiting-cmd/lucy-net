@@ -23,7 +23,7 @@ posts.forEach(renderPost);
 document.querySelectorAll("time[data-published]").forEach(timeEl=>applyTimestamp(timeEl,timeEl.dataset.published));
 
 const nav=document.querySelector(".topnav");
-if(nav){nav.innerHTML='<a href="#stickers">Стикеры</a><a href="#worlds">Sphynx Vale</a><a href="#bonuses">Бонусы</a>';}
+if(nav){nav.innerHTML='<a href="#stickers">Стикеры</a><a href="#worlds">Sphynx Vale</a>';}
 
 const pinned=document.querySelector("#stickers");
 if(pinned){
@@ -48,8 +48,5 @@ if(pinned){
 const worlds=document.querySelector("#worlds");
 if(worlds){
  const moon=document.createElement("div");moon.className="world-symbol";moon.setAttribute("aria-hidden","true");moon.textContent="☾";worlds.prepend(moon);
- const bonus=document.createElement("section");bonus.id="bonuses";bonus.className="utility-card bonus-card";
- bonus.innerHTML='<div><p class="eyebrow">бонусы</p><h2>Забрать Люсю.</h2><p>Стикеры уже доступны. Остальные материалы будут появляться здесь по мере того, как Кожаная придумает мне новые обязанности.</p><p class="small-note">Без регистрации. Без аккаунта.</p></div><div class="button-row"><a class="platform-button" href="https://t.me/addstickers/LucienSphynxVale" target="_blank" rel="noopener noreferrer">Telegram</a><a class="platform-button" href="https://max.ru/stickerset/tF6aGhBbHkUcDq4DeCsr9boXd4EbcHe0UyiUWlW85Z0" target="_blank" rel="noopener noreferrer">MAX</a></div>';
- worlds.after(bonus);
 }
 if(!document.querySelector('link[rel="canonical"]')){const canonical=document.createElement("link");canonical.rel="canonical";canonical.href="https://lusy.space/";document.head.appendChild(canonical);}
