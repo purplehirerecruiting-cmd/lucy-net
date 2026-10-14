@@ -36,3 +36,11 @@
 .shop-sidebar-right .shop-side-links{margin-top:8px}
 .royal-mobile-note{margin:0 0 4px;color:var(--muted);font-size:.79rem;line-height:1.45}
 @media(max-width:1199px){.shop-mobile-group:last-child summary{font-size:clamp(.7rem,2.8vw,.88rem);padding:0 5px}}
+
+/* Match Lucien's shop decree to the royal audience panel */
+.shop-sidebar-left{display:flex;flex-direction:column;gap:10px}
+.shop-sidebar-left .eyebrow{font-size:.69rem;line-height:1.4;letter-spacing:.07em}
+.shop-sidebar-left h2{margin:0;font-size:1.25rem;line-height:1.2}
+.shop-sidebar-left p:not(.eyebrow){margin:0;line-height:1.48}
+.shop-sidebar-left .shop-side-links{margin-top:8px}
+@media(max-width:1199px){.shop-mobile-group:first-child summary{font-size:clamp(.7rem,2.8vw,.88rem);padding:0 5px}}
