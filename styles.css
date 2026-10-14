@@ -27,3 +27,12 @@
 }
 @media(max-width:640px){.shop-mobile-bar{top:96px}}
 @media(max-width:360px){.shop-mobile-bar{top:104px}}
+
+/* Lucien's royal audience: keep the decree legible in desktop sidebar and mobile dropdown */
+.shop-sidebar-right{display:flex;flex-direction:column;gap:10px}
+.shop-sidebar-right .eyebrow{font-size:.69rem;line-height:1.4;letter-spacing:.07em}
+.shop-sidebar-right h2{margin:0;font-size:1.25rem;line-height:1.2}
+.shop-sidebar-right p:not(.eyebrow){margin:0;line-height:1.48}
+.shop-sidebar-right .shop-side-links{margin-top:8px}
+.royal-mobile-note{margin:0 0 4px;color:var(--muted);font-size:.79rem;line-height:1.45}
+@media(max-width:1199px){.shop-mobile-group:last-child summary{font-size:clamp(.7rem,2.8vw,.88rem);padding:0 5px}}
