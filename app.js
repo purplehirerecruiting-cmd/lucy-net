@@ -28,7 +28,7 @@ const pinned=document.querySelector("#stickers");
 if(pinned){
  const oldLabel=pinned.querySelector(":scope > .eyebrow");
  if(oldLabel){oldLabel.remove();}
- const label=document.createElement("div");label.className="pinned-label";label.innerHTML="<span>закреплено · № 1</span><span>10 стикеров</span>";pinned.prepend(label);
+ const label=document.createElement("div");label.className="pinned-label";label.innerHTML="<span aria-label=\"Закреплённый пост\" title=\"Закреплённый пост\">📌</span><span>10 стикеров</span>";pinned.prepend(label);
  const text=pinned.querySelector(".post-text");
  if(text){
   const heading=document.createElement("div");heading.className="sticker-heading";heading.textContent="Стикеры ЛЮСИ.НЕТ";text.before(heading);
